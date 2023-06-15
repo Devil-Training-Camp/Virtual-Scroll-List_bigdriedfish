@@ -1,0 +1,38 @@
+{
+  "name": "virtual-scroll-list",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "lint-staged": {
+    "**/*.js": [
+      "npm run format",
+      "npm run lint",
+      "git add ."
+    ]
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "vue": "^3.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "commitlint": "^17.6.5",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.5"
+  }
+}
